@@ -1,4 +1,4 @@
 export const getEateries = () => {
-    return fetch("https://developer.nps.gov/api/v1/parks?api_key=ZQJdiGzoicWSruvzaWpcJ1QRYzasczeinuyJ9od5")
+    return fetch("http://holidayroad.nss.team/eateries")
     .then(response => response.json())
 }
