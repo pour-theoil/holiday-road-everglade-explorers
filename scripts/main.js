@@ -1,0 +1,1 @@
+import { getEateries } from "./eateries.EateryProvider.js"
