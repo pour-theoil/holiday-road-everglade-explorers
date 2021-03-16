@@ -1,5 +1,5 @@
-export const getParks = () => {
-    fetch(`https://developer.nps.gov/api/v1/parks?api_key=ZQJdiGzoicWSruvzaWpcJ1QRYzasczeinuyJ9od5&limit=500`)
+export const getParks = (api) => {
+    fetch(`https://developer.nps.gov/api/v1/parks?api_key=${api}&limit=500`)
     .then(function (result) {
         return result.json();
     }).then(function (data) {
