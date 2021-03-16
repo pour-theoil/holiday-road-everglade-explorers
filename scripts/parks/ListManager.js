@@ -1,14 +1,19 @@
-// import {getParks} from "./ParkProvider.js"
-// import {settings} from "../Settings.js"
+import {useParks, getParks} from "./ParkProvider.js"
+import {settings} from "../Settings.js"
 
 
-// export const entryParksLoop = () => {
-//     const entryHTMLSelector = document.querySelector("#chooseParks")
-//         getParks(settings.npsKey).then(param => {
-//             param.forEach((item,index) => {
-//                 entryHTMLSelector.options[index] = new Option(item.name, item.id)
-//             })
-//     })
-// }
-
-
+export const entryParksLoop = () => {
+    getParks(settings.npsKey).then(()=>{
+        let parkArray = [];
+        const park = useParks()
+        park.forEach((item) => {
+            if (item.states === "NC" || item.states === "TN" || item.states === "VA") {
+                parkArray.push(item);
+            }
+            })
+            const entryHTMLSelector = document.querySelector("#choosePark")
+            parkArray.forEach((item,index) => {
+                entryHTMLSelector.options[index] = new Option(item.name, item.id)
+            })
+    })
+}

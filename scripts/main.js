@@ -12,8 +12,7 @@ import {entryParksLoop} from "./parks/ListManager.js"
 
 entryLoopLog()
 entryEateryLoop()
-// entryParksLoop()
-// getParks(settings.npsKey)
+entryParksLoop()
 
 
 const fiveday = () => {
