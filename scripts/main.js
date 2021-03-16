@@ -5,6 +5,15 @@ import {getAttractions} from "./attractions/AttractionProvider.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 import { getForcast } from "./weather/WeatherList.js";
 import { settings } from "./Settings.js"
+import {entryLoopLog} from "./attractions/ListManager.js"
+import {entryEateryLoop} from "./eateries/ListManager.js"
+import {entryParksLoop} from "./parks/ListManager.js"
+
+
+entryLoopLog()
+entryEateryLoop()
+// entryParksLoop()
+// getParks(settings.npsKey)
 
 
 const fiveday = () => {
