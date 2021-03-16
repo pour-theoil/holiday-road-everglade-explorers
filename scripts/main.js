@@ -6,7 +6,7 @@ import { getWeather } from "./weather/WeatherProvider.js";
 import { getForcast } from "./weather/WeatherList.js";
 import { settings } from "./Settings.js"
 
-
+getAttractions();
 const fiveday = () => {
     getWeather("37.58", "-85.67", settings.weatherKey)
     .then(dailyweather => {
