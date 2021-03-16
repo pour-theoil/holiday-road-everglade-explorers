@@ -1,5 +1,7 @@
 import { getEateries } from "./eateries/EateryProvider.js"
 import { getParks } from "./parks/ParkProvider.js"
+
+import {getAttractions} from "./attractions/AttractionProvider.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 import { getForcast } from "./weather/WeatherList.js";
 import { settings } from "./Settings.js"
@@ -13,3 +15,4 @@ const fiveday = () => {
 } 
 
     
+
