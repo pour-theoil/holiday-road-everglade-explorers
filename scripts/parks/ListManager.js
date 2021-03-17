@@ -13,7 +13,7 @@ export const entryParksLoop = () => {
             })
             const entryHTMLSelector = document.querySelector("#choosePark")
             parkArray.forEach((item,index) => {
-                entryHTMLSelector.options[index] = new Option(item.name, item.id)
+                entryHTMLSelector.options[index+1] = new Option(item.name, item.id)
             })
     })
 }
