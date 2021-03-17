@@ -1,21 +1,16 @@
-import { getEateries } from "./eateries/EateryProvider.js"
-import { getParks } from "./parks/ParkProvider.js"
-
 import { getAttractions } from "./attractions/AttractionProvider.js"
 import { parksDetailsModal } from "./modal/details.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 import { getForcast } from "./weather/WeatherList.js";
 import { settings } from "./Settings.js"
 import { entryLoopLog } from "./attractions/ListManager.js"
-import { entryEateryLoop } from "./eateries/ListManager.js"
+import { entryEateryLoop, eateryCard } from "./eateries/ListManager.js"
 import { entryParksLoop, parkCard } from "./parks/ListManager.js"
-import { parkPreview } from "./preview.js"
 
 
 entryLoopLog()
 entryEateryLoop()
 entryParksLoop()
-// getParks(settings.npsKey)
 
 getAttractions();
 const fiveday = () => {
@@ -26,12 +21,10 @@ const fiveday = () => {
 }
 
 
-// document.getElementById("#chooseEatery").selectedIndex = -1;
-
-
-// event listeners
+// event listeners for dropdowns
 const dropdownElement = document.querySelector(".itinerary");
 
+// park dropdown
 dropdownElement.addEventListener("change", event => {
     const parkSelector = event.target.value
     if (event.target.id === "choosePark") {
@@ -40,7 +33,7 @@ dropdownElement.addEventListener("change", event => {
     }
 })
 
-
+// attraction dropdown
 dropdownElement.addEventListener("change", event => {
     if (event.target.id === "chooseAttractions") {
         const attractionSelector = event.target.value
@@ -49,20 +42,14 @@ dropdownElement.addEventListener("change", event => {
     }
 })
 
+// eatery dropdown
 dropdownElement.addEventListener("change", event => {
     if (event.target.id === "chooseEatery") {
         const eaterySelector = event.target.value
         console.log(`user wants to pick ${eaterySelector}`)
-        return eaterySelector
+        eateryCard(eaterySelector)
     }
 })
-// document.getElementById("#chooseEatery").selectedIndex = -1;
-
-// let select = document.querySelector("#choosePark");
-// let result = document.querySelector(".parkCard");
-// select.addEventListener("change", event => {
-//     result.textContent = event.value
-// })
     
 
 

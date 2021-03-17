@@ -1,6 +1,4 @@
-
-import {getEateries} from "./eateryProvider.js"
-
+import {getEateries, eateryArray} from "./eateryProvider.js"
 
 export const entryEateryLoop = () => {
     const entryHTMLSelector = document.querySelector("#chooseEatery")
@@ -12,14 +10,14 @@ export const entryEateryLoop = () => {
     })
 }
 
-
-
-// const selectBrickMaterial = document.getElementById('brickMaterial');
-// 		selectList.forEach((item, index) =>{
-// 			selectBrickMaterial.options[index] = new Option(item, item);
-// 		})
-
-// var x = document.getElementById("mySelect");
-// var option = document.createElement("option");
-// option.text = "Kiwi";
-// x.add(option);
+export const eateryCard = (eateryId) => {
+    eateryArray.forEach(item => {
+        if (item.id.toString() === eateryId) {
+            const eateryHTML = `
+            <h4>${item.businessName}</h4>
+            <p>${item.city}, ${item.state}</p>
+            `
+            document.querySelector(".eateryCard").innerHTML = eateryHTML
+        }
+    })
+}
