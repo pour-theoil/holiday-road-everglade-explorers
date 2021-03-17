@@ -25,3 +25,29 @@ const fiveday = () => {
 
     
 // document.getElementById("#chooseEatery").selectedIndex = -1;
+
+
+// event listeners
+const dropdownElement = document.querySelector(".itinerary");
+
+dropdownElement.addEventListener("change", event => {
+    if(event.target.id === "choosePark") {
+        const parkSelector = event.target.value
+        console.log(`user wants to pick ${parkSelector}`)
+        
+    }
+})
+
+dropdownElement.addEventListener("change", event => {
+    if(event.target.id === "chooseAttractions") {
+        const attractionSelector = event.target.value
+        console.log(`user wants to pick ${attractionSelector}`)
+    }
+})
+
+dropdownElement.addEventListener("change", event => {
+    if(event.target.id === "chooseEatery") {
+        const eaterySelector = event.target.value
+        console.log(`user wants to pick ${eaterySelector}`)
+    }
+})

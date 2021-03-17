@@ -7,7 +7,7 @@ export const entryEateryLoop = () => {
     var option = document.createElement("option");
         getEateries().then(param => {
             param.forEach((item,index) => {
-                entryHTMLSelector.options[index] = new Option(item.businessName, item.id)
+                entryHTMLSelector.options[index+1] = new Option(item.businessName, item.id)
             })
     })
 }
