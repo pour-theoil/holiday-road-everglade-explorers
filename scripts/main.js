@@ -34,7 +34,9 @@ dropdownElement.addEventListener("change", event => {
     if(event.target.id === "choosePark") {
         const parkSelector = event.target.value
         console.log(`user wants to pick ${parkSelector}`)
-        
+        return parkSelector
+        const parkCardElement = document.querySelector(".parkCard");
+        parkCardElement.innerHTML = 
     }
 })
 
