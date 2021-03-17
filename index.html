@@ -10,42 +10,81 @@
 </head>
 
 <body>
-    <div class="mainBody">
+    <main>
+<!-- Nav Bar -->
         <nav>
-            <img src="/Images/ParkLogoTransBackground_00000.png" alt="Logo">
+            <img src="/Images/ParkLogoFinal_00000.png" alt="Logo" class="logo">
            
             <select name="WhereTo" id="menuSelector">
                 <option value="">Top</option>
                 <option value="">option2</option>
             </select>
         </nav>
+<!-- Heading -->
+            <h1>Lose Your Kids At The Park</h1>
 
-        <div class="headerInfo">
-            <h1>Header</h1>
-            
-        </div>
+<!-- Selector/Side Bar flex box -->
+        <div class="selectorArea">
+
+<!-- selector drop down area -->
         <div class="selectorContainer">
+            <div class="dropDownSection">
             <label>Choose your park:</label>
-                <select name="choosePark" id="choosePark">
+                <select name="choosePark" id="choosePark" class="selectorDropdown">
                 
                 </select>
+                </div>
+                <div class="dropDownSection">
                 <label>Choose your attraction:</label>
-                <select name="chooseAttraction" id="chooseAttractions">
+                <select name="chooseAttraction" id="chooseAttractions" class="selectorDropdown">
                  
                 </select>
+                </div>
+                <div class="dropDownSection">
                 <label>Choose your eatery:</label>
-                <select name="chooseEatery" id="chooseEatery">
+                <select name="chooseEatery" id="chooseEatery" class="selectorDropdown">
                     
                 </select>
-            <aside class="savedItinerary">
-saved Itinerary
-            </aside>
-            <div class="itineraryPreview">
-              My Current itineraryPreview
+                </div>
+                
+<!-- displayed items for side bar below -->
+            </div>
+            <div class="aside">
+                <h3>Your Destinations</h3>
+                <ul>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                </ul>
             </div>
         </div>
+        <div class="divider"></div>
+<!-- Selected items below -->
+            <div class="itineraryPreview">
+                <div class="itineraryCard">
+                    <h3>First Destination:</h3>
+                    <div class="parkCard">
+                        Park card info
+                    </div>
+                </div>
+                <div class="itineraryCard">
+                    <h3>Second Destination:</h3>
+                    <div class="bizarreCard">
+                        Bizarre card info
+                    </div>
+                </div>
+                <div class="itineraryCard">
+                    <h3>Third Destination:</h3>
+                    <div class="eateryCard">
+                        eatery card info
+                    </div>
+ 
+                </div>
+              
+          </div>
+<!-- Footer -->
         <footer>BY Us</footer>
-    </div>
+    </main>
     <script type="module" src="./scripts/main.js"></script>
 </body>
 
