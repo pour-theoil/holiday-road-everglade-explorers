@@ -8,7 +8,7 @@ import { getForcast } from "./weather/WeatherList.js";
 import { settings } from "./Settings.js"
 import { entryLoopLog } from "./attractions/ListManager.js"
 import { entryEateryLoop } from "./eateries/ListManager.js"
-import { entryParksLoop } from "./parks/ListManager.js"
+import { entryParksLoop, parkCard } from "./parks/ListManager.js"
 import { parkPreview } from "./preview.js"
 
 
@@ -36,8 +36,7 @@ dropdownElement.addEventListener("change", event => {
     const parkSelector = event.target.value
     if (event.target.id === "choosePark") {
         console.log(`user wants to pick ${parkSelector}`)
-        const cardElement = document.querySelector(".parkCard");
-        cardElement.innerHTML = parkPreview(parkSelector);
+        parkCard(parkSelector)
     }
 })
 
