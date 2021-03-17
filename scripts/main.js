@@ -15,7 +15,7 @@ entryEateryLoop()
 entryParksLoop()
 // getParks(settings.npsKey)
 
-
+getAttractions();
 const fiveday = () => {
     getWeather("37.58", "-85.67", settings.weatherKey)
     .then(dailyweather => {
