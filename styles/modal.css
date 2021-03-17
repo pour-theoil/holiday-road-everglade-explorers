@@ -24,11 +24,12 @@
     border-radius: 5px;
   }
   
+  .modal-content p {
+    max-width: 90%;
+  }
   /* The Close Button */
   .close {
     color: #ef476f;
-    margin-top: -5%;
-    margin-right: -3%;
     font-size: 28px;
     font-weight: bold;
   }
