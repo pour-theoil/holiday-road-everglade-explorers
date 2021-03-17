@@ -15,6 +15,7 @@ export const eateryCard = (eateryId) => {
         if (item.id.toString() === eateryId) {
             const eateryHTML = `
             <h4>${item.businessName}</h4>
+            <p>${item.description}</p>
             <p>${item.city}, ${item.state}</p>
             `
             document.querySelector(".eateryCard").innerHTML = eateryHTML
