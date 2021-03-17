@@ -70,40 +70,22 @@ dropdownElement.addEventListener("change", event => {
 
 
 
+const tentativeItenerary = document.querySelector(".itineraryPreview")
 
 
+tentativeItenerary.addEventListener("click", event =>{
+    console.log(event.target.id)
+    if (event.target.id === "ParkDetails") {
+        console.log("where is the modal")
+        const modal = document.getElementById("natParksDetails")
+        modal.style.display = "block";
+    }
+} )
 
-const showdetailsmodal = () => {
-    //Get a reference to the location on the DOM where the nav will display
-    const parkDetailsElement = document.querySelector(".parkCard");
-	parkDetailsElement.innerHTML = parksDetailsModal("this is a test");
-}
-showdetailsmodal();
-
-// Get the modal
-
-const modal = document.getElementById("natParksDetails");
-
-// Get the button that opens the modal
-const btn = document.getElementById("parkDetails");
-
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    console.log("clickevent")
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+tentativeItenerary.addEventListener("click", event =>{
+    console.log(event.target.id)
+    if (event.target.id === "closeparkdets") {
+        const modal = document.getElementById("natParksDetails")
         modal.style.display = "none";
     }
-}
+} )

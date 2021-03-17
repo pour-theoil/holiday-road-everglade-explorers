@@ -25,6 +25,14 @@ export const parkCard = (parkId) => {
             <h4>${item.name}</h4>
             <p>${item.description}</p>
             <p>${item.addresses[0].city}, ${item.addresses[0].stateCode}</p>
+            <div id="natParksDetails" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <p>${item.description}</p>
+                    <span id="closeparkdets" class="close">&times;</span>
+                 </div>
+    
+            </div>
             `
             document.querySelector(".parkCard").innerHTML = parkHTML
         }
