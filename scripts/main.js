@@ -53,3 +53,4 @@ dropdownElement.addEventListener("change", event => {
         console.log(`user wants to pick ${eaterySelector}`)
     }
 })
+document.getElementById("#chooseEatery").selectedIndex = -1;
