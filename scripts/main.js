@@ -24,4 +24,4 @@ const fiveday = () => {
 } 
 
     
-// document.getElementById("#chooseEatery").selectedIndex = -1;
+document.getElementById("#chooseEatery").selectedIndex = -1;
