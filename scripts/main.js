@@ -13,6 +13,7 @@ import {entryParksLoop} from "./parks/ListManager.js"
 entryLoopLog()
 entryEateryLoop()
 entryParksLoop()
+// getParks(settings.npsKey)
 
 
 const fiveday = () => {
@@ -23,4 +24,4 @@ const fiveday = () => {
 } 
 
     
-
+// document.getElementById("#chooseEatery").selectedIndex = -1;
