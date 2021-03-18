@@ -1,5 +1,6 @@
 
-import {getAttractions} from "./AttractionProvider.js"
+import { getAttractions, attractionArray } from "./AttractionProvider.js"
+
 
 
 export const entryLoopLog = () => {
@@ -13,14 +14,23 @@ export const entryLoopLog = () => {
     })
 }
 
-
-
-// const selectBrickMaterial = document.getElementById('brickMaterial');
-// 		selectList.forEach((item, index) =>{
-// 			selectBrickMaterial.options[index] = new Option(item, item);
-// 		})
-
-// var x = document.getElementById("mySelect");
-// var option = document.createElement("option");
-// option.text = "Kiwi";
-// x.add(option);
+export const attractionCard = (attractionId) => {
+    attractionArray.forEach(item => {
+        if (item.id.toString() === attractionId) {
+            const attractionHTML = `
+            <h4>${item.name}</h4>
+            <p>${item.description}</p>
+            <p>${item.city}, ${item.state}</p>
+            <div id="natParksDetails" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <p>${item.description}</p>
+                    <span id="closeAttractionDets" class="close">&times;</span>
+                 </div>
+    
+            </div>
+            `
+            document.querySelector(".bizarreCard").innerHTML = attractionHTML
+        }
+    });
+}
