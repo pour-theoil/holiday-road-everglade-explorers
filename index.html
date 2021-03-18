@@ -11,43 +11,43 @@
 
 <body>
     <main class="itinerary">
-<!-- Nav Bar -->
+        <!-- Nav Bar -->
         <nav>
             <img src="/Images/ParkLogoFinal_00000.png" alt="Logo" class="logo">
-           
+
             <select name="WhereTo" id="menuSelector">
                 <option value="">Top</option>
                 <option value="">option2</option>
             </select>
         </nav>
-<!-- Heading -->
-            <h1>Lose Your Kids At The Park</h1>
+        <!-- Heading -->
+        <h1>Lose Your Kids At The Park</h1>
 
-<!-- Selector/Side Bar flex box -->
+        <!-- Selector/Side Bar flex box -->
         <div class="selectorArea">
 
-<!-- selector drop down area -->
-        <div class="selectorContainer">
-            <div class="dropDownSection">
-            <label>Choose your park:</label>
-                <select name="choosePark" id="choosePark" class="selectorDropdown">
-                
-                </select>
+            <!-- selector drop down area -->
+            <div class="selectorContainer">
+                <div class="dropDownSection">
+                    <label>Choose your park:</label>
+                    <select name="choosePark" id="choosePark" class="selectorDropdown">
+
+                    </select>
                 </div>
                 <div class="dropDownSection">
-                <label>Choose your attraction:</label>
-                <select name="chooseAttraction" id="chooseAttractions" class="selectorDropdown">
-                 
-                </select>
+                    <label>Choose your attraction:</label>
+                    <select name="chooseAttraction" id="chooseAttractions" class="selectorDropdown">
+
+                    </select>
                 </div>
                 <div class="dropDownSection">
-                <label>Choose your eatery:</label>
-                <select name="chooseEatery" id="chooseEatery" class="selectorDropdown">
-                    
-                </select>
+                    <label>Choose your eatery:</label>
+                    <select name="chooseEatery" id="chooseEatery" class="selectorDropdown">
+
+                    </select>
                 </div>
-                
-<!-- displayed items for side bar below -->
+
+                <!-- displayed items for side bar below -->
             </div>
             <div class="aside">
                 <h3>Your Destinations</h3>
@@ -59,34 +59,49 @@
             </div>
         </div>
         <div class="divider"></div>
-<!-- Selected items below -->
-            <div class="itineraryPreview">
-                <div class="itineraryCard">
-                    <h3>First Destination:</h3>
-                    <div class="parkCard">
-                        Park card info
-                    </div>
-                    <button id="ParkDetails" class="parkDetails">Details</button>
-                    <button class="weatherDetails">Weather</button>
+        <!-- Selected items below -->
+        <div class="itineraryPreview">
+            <div class="itineraryCard">
+                <h3>First Destination:</h3>
+                <div class="parkCard">
+                    Park card info
                 </div>
-                <div class="itineraryCard">
-                    <h3>Second Destination:</h3>
-                    <div class="bizarreCard">
-                        Bizarre card info
-                    </div>
-                    <button class="bizarreDetails">Details</button>
+                <button id="ParkDetails" class="parkDetails">Details</button>
+                <button class="weatherDetails">Weather</button>
+            </div>
+            <div class="itineraryCard">
+                <h3>Second Destination:</h3>
+                <div class="bizarreCard">
+                    Bizarre card info
                 </div>
-                <div class="itineraryCard">
-                    <h3>Third Destination:</h3>
-                    <div class="eateryCard">
-                        eatery card info
-                    </div>
-                    <button class="eateryDetails">Details</button>
- 
+                <button class="bizarreDetails">Details</button>
+            </div>
+            <div class="itineraryCard">
+                <h3>Third Destination:</h3>
+                <div class="eateryCard">
+                    eatery card info
                 </div>
-                <div class="modspot"></div>
-          </div>
-<!-- Footer -->
+                <button class="eateryDetails">Details</button>
+
+            </div>
+            <button id="btnSaveItinerary">- Save Itinerary -</button>
+        </div>
+        <div class="modspot"></div>
+
+        <div id="saveItineraryModal">
+            <!-- Modal content -->
+            <div class="saveItinerarymodal-content">
+                
+
+                <h3 class="saveItinerary-p"></h3>
+                <input type="text" id="saveItinerary-input" placeholder="Enter itinerary name" />
+                <button id="saveItinerary-btn">Save Itinerary</button>
+                <href><span class="saveItineraryClose">&times;</span></href>     
+            </div>
+        </div>
+        </div>
+
+        <!-- Footer -->
         <footer>BY Us</footer>
     </main>
     <script type="module" src="./scripts/main.js"></script>

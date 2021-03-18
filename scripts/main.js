@@ -5,7 +5,8 @@ import { getForcast } from "./weather/WeatherList.js";
 import { settings } from "./Settings.js"
 import { entryLoopLog } from "./attractions/ListManager.js"
 import { entryEateryLoop, eateryCard } from "./eateries/ListManager.js"
-import { entryParksLoop, parkCard } from "./parks/ListManager.js"
+import { entryParksLoop, parkCard } from "./parks/ListManager.js";
+import {saveItin} from "./saveItinerary.js"
 
 
 entryLoopLog()
@@ -23,13 +24,31 @@ const fiveday = () => {
 
 // event listeners for dropdowns
 const dropdownElement = document.querySelector(".itinerary");
-
+const btnsave = document.querySelector("#btnSaveItinerary");
+btnsave.disabled = true;
+//save itinerary button
+btnsave.addEventListener("click", event =>{
+    let itineraryObj = {};
+    if (event.target.id === "btnSaveItinerary") {
+        let HTMLSelector = document.querySelector("#choosePark");
+        itineraryObj.parkId =  HTMLSelector.value;
+        itineraryObj.parkName =  HTMLSelector.options[HTMLSelector.selectedIndex].innerText;
+        HTMLSelector = document.querySelector("#chooseAttractions");
+        itineraryObj.attractionId =  HTMLSelector.value;
+        itineraryObj.attractionName =  HTMLSelector.options[HTMLSelector.selectedIndex].innerText;  
+        HTMLSelector = document.querySelector("#chooseEatery");
+        itineraryObj.eateryId =  HTMLSelector.value;
+        itineraryObj.eateryName =  HTMLSelector.options[HTMLSelector.selectedIndex].innerText;      
+        saveItin(itineraryObj);  
+    }
+})
 // park dropdown
 dropdownElement.addEventListener("change", event => {
     const parkSelector = event.target.value
     if (event.target.id === "choosePark") {
         console.log(`user wants to pick ${parkSelector}`)
-        parkCard(parkSelector)
+        parkCard(parkSelector);
+        btnsave.disabled = false;
     }
 })
 
