@@ -3,7 +3,7 @@ import { parksDetailsModal } from "./modal/details.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 import { getForcast } from "./weather/WeatherList.js";
 import { settings } from "./Settings.js"
-import { entryLoopLog } from "./attractions/ListManager.js"
+import { entryLoopLog, attractionCard } from "./attractions/ListManager.js"
 import { entryEateryLoop, eateryCard } from "./eateries/ListManager.js"
 import { entryParksLoop, parkCard } from "./parks/ListManager.js"
 
@@ -34,11 +34,15 @@ dropdownElement.addEventListener("change", event => {
 })
 
 // attraction dropdown
+//listening to the drop down
 dropdownElement.addEventListener("change", event => {
+    //pulls the id of what ever the user pulled out of the drop down
     if (event.target.id === "chooseAttractions") {
+        //set attractionSelector to the value selected
         const attractionSelector = event.target.value
         console.log(`user wants to pick ${attractionSelector}`)
-        return attractionSelector
+        //takes the value from attractionSelector and formats it into the attractionCard for HTML
+        attractionCard(attractionSelector)
     }
 })
 
