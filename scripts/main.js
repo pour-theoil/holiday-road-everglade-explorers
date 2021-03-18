@@ -6,13 +6,13 @@ import { settings } from "./Settings.js"
 import { entryLoopLog, attractionCard } from "./attractions/ListManager.js"
 import { entryEateryLoop, eateryCard } from "./eateries/ListManager.js"
 import { entryParksLoop, parkCard } from "./parks/ListManager.js";
-import {saveItin} from "./saveItinerary.js"
+import {saveItin,getSavedItinerary,loadSavedItinerary} from "./savedItinerary/saveItinerary.js"
 
 
 entryLoopLog()
 entryEateryLoop()
 entryParksLoop()
-
+getSavedItinerary()
 getAttractions();
 const fiveday = () => {
     getWeather("37.58", "-85.67", settings.weatherKey)
@@ -25,6 +25,7 @@ const fiveday = () => {
 // event listeners for dropdowns
 const dropdownElement = document.querySelector(".itinerary");
 const btnsave = document.querySelector("#btnSaveItinerary");
+const listItinerary = document.querySelector("#ul-savedItinerary");
 btnsave.disabled = true;
 //save itinerary button
 btnsave.addEventListener("click", event =>{
@@ -51,7 +52,11 @@ dropdownElement.addEventListener("change", event => {
         btnsave.disabled = false;
     }
 })
-
+listItinerary.addEventListener("click", event =>{
+    const e = new Event("change");
+    loadSavedItinerary(event.target.innerText);
+    
+});
 // attraction dropdown
 //listening to the drop down
 dropdownElement.addEventListener("change", event => {

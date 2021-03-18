@@ -25,6 +25,7 @@ html {
 body{
     margin: 0px;
     box-sizing: border-box;
+    font-family: "Source Serif Pro", serif;
 }
 nav{
     height: 75px;
@@ -45,12 +46,15 @@ nav{
     color: #073b4c;
 }
 h1{
-    /* font-family:; */
+    font-family: "Source Sans Pro", sans-serif;
     margin-top: 10%;
     margin-left: 5%;
     margin-bottom: 0px;
     font-size: 40px;
     color:#073b4c;
+}
+h3, label {
+    font-family: "Source Code Pro", monospace;
 }
 .selectorContainer{
     margin: 5%;

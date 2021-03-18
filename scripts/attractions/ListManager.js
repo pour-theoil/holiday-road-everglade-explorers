@@ -20,15 +20,23 @@ export const attractionCard = (attractionId) => {
             const attractionHTML = `
             <h3>${item.name}</h3>
             <p>${item.city}, ${item.state}</p>
+
             <p class="para">${item.description}</p>
             <div id="natParksDetails" class="modal">
+            <div id="bizDetails" class="modal">
+
             <!-- Modal content -->
-                <div class="modal-content">
-                    <p>${item.description}</p>
-                    <span id="closeAttractionDets" class="close">&times;</span>
-                 </div>
-    
+            <div class="modal-content">
+                <ul><h3>Important Details</h3>
+                    <li>Diaper Facility: ${item.ameneties.diaperFacility ? "Yes" : "No" }</li>
+                    <li>Playground: ${item.ameneties.playground ? "Yes":"No"}</li>
+                    <li>Restroom: ${item.ameneties.restrooms ? "Yes":"No"}</li>
+                </ul>
+                <span id="closebizdets" class="close">&times;</span>
+             </div>
+
             </div>
+            <button id="bizarreDetails" class="bizarreDetails">Details</button>
             `
             document.querySelector(".bizarreCard").innerHTML = attractionHTML
         }
