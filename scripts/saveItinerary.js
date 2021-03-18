@@ -15,15 +15,15 @@ export const  saveItin = (itineraryObj) =>{
     span.onclick = function() {
         modal.style.display = "none";
       }
-      btn.addEventListener("click", event =>{
+    btn.addEventListener("click", event =>{
         if (input.value.length > 0){
+            para.innerHTML = "Saving itinerary"  
             itineraryObj.itineraryName = input.value;
             postItinerary(itineraryObj)
-            .then(response => response.json())
-            .then(parsedData => {parkArray = parsedData.data
-                para.innerHTML = "Itinerary saved!!"
-                setTimeout(modal.style.display = "none", 500);
-            });
+            .then(data => {
+              alert(`The itinerary : ${data.itineraryName} was saved`)
+              modal.style.display = "none"
+          })
         }else {
             alert("enter am Itinerary Name");
             input.focus();
@@ -40,6 +40,5 @@ export const  saveItin = (itineraryObj) =>{
             body: JSON.stringify(postObj)
       
         })
-            .then(response => response.json())
-      
+        .then(response => response.json())
       }
