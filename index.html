@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Park Travel</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@700&family=Source+Serif+Pro&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -29,19 +33,19 @@
             <!-- selector drop down area -->
             <div class="selectorContainer">
                 <div class="dropDownSection">
-                    <label>Choose your park:</label>
+                    <label>CHOOSE YOUR PARK:</label>
                     <select name="choosePark" id="choosePark" class="selectorDropdown">
 
                     </select>
                 </div>
                 <div class="dropDownSection">
-                    <label>Choose your attraction:</label>
+                    <label>CHOOSE YOUR ATTRACTION:</label>
                     <select name="chooseAttraction" id="chooseAttractions" class="selectorDropdown">
 
                     </select>
                 </div>
                 <div class="dropDownSection">
-                    <label>Choose your eatery:</label>
+                    <label>CHOOSE YOUR EATERY:</label>
                     <select name="chooseEatery" id="chooseEatery" class="selectorDropdown">
 
                     </select>
@@ -59,42 +63,39 @@
             </div>
         </div>
         <div class="divider"></div>
-<!-- Selected items below -->
-            <div class="itineraryPreview">
-                <div class="itineraryCard">
-                    <h3>First Destination:</h3>
-                    <div class="parkCard">
-                        Park card info
-                    </div>
-                    <div></div>
+        <!-- Selected items below -->
+        <div class="itineraryPreview">
+            <div class="itineraryCard">
+                <h3>Park:</h3>
+                <div class="parkCard">
                 </div>
-                <div class="itineraryCard">
-                    <h3>Second Destination:</h3>
-                    <div class="bizarreCard">
-                        Bizarre card info
-                    </div>
+                <div></div>
+            </div>
+            <div class="itineraryCard">
+                <h3>Attraction:</h3>
+                <div class="bizarreCard">
                 </div>
-                <div class="itineraryCard">
-                    <h3>Third Destination:</h3>
-                    <div class="eateryCard">
-                        eatery card info
-                    </div>
+            </div>
+            <div class="itineraryCard">
+                <h3>Eatery:</h3>
+                <div class="eateryCard">
                 </div>
-                <button id="btnSaveItinerary">- Save Itinerary -</button>
-          </div>
-          <div id="saveItineraryModal">
+            </div>
+            <button id="btnSaveItinerary">- Save Itinerary -</button>
+        </div>
+        <div id="saveItineraryModal">
             <!-- Modal content -->
             <div class="saveItinerarymodal-content">
-                
+
 
                 <h3 class="saveItinerary-p"></h3>
                 <input type="text" id="saveItinerary-input" placeholder="Enter itinerary name" />
                 <button id="saveItinerary-btn">Save Itinerary</button>
-                <href><span class="saveItineraryClose">&times;</span></href>     
+                <href><span class="saveItineraryClose">&times;</span></href>
             </div>
         </div>
         </div>
-<!-- Footer -->
+        <!-- Footer -->
         <footer>BY Us</footer>
     </main>
     <script type="module" src="./scripts/main.js"></script>
