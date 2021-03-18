@@ -1,5 +1,5 @@
 import { getAttractions } from "./attractions/AttractionProvider.js"
-import { parksDetailsModal } from "./modal/details.js"
+import { weatherModal } from "./modal/details.js"
 import { getWeather } from "./weather/WeatherProvider.js";
 import { getForcast } from "./weather/WeatherList.js";
 import { settings } from "./Settings.js"
@@ -61,7 +61,6 @@ const tentativeItenerary = document.querySelector(".itineraryPreview")
 
 
 tentativeItenerary.addEventListener("click", event =>{
-    console.log(event.target.id)
     if (event.target.id === "ParkDetails") {
         console.log("where is the modal")
         const modal = document.getElementById("natParksDetails")
@@ -70,9 +69,52 @@ tentativeItenerary.addEventListener("click", event =>{
 } )
 
 tentativeItenerary.addEventListener("click", event =>{
-    console.log(event.target.id)
     if (event.target.id === "closeparkdets") {
         const modal = document.getElementById("natParksDetails")
+        modal.style.display = "none";
+    }
+} )
+
+tentativeItenerary.addEventListener("click", event =>{
+    if (event.target.id === "bizarreDetails") {
+        console.log("where is the modal")
+        const modal = document.getElementById("bizDetails")
+        modal.style.display = "block";
+    }
+} )
+
+tentativeItenerary.addEventListener("click", event =>{
+    if (event.target.id === "closebizdets") {
+        const modal = document.getElementById("bizDetails")
+        modal.style.display = "none";
+    }
+} )
+
+tentativeItenerary.addEventListener("click", event =>{
+    if (event.target.id === "eateryDetails") {
+        const modal = document.getElementById("eatsDetails")
+        modal.style.display = "block";
+    }
+} )
+
+tentativeItenerary.addEventListener("click", event =>{
+    if (event.target.id === "closeeatsdets") {
+        const modal = document.getElementById("eatsDetails")
+        modal.style.display = "none";
+    }
+} )
+
+tentativeItenerary.addEventListener("click", event =>{
+    if (event.target.id === "eateryDetails") {
+        weatherModal();
+        const modal = document.getElementById("weatherForcast")
+        modal.style.display = "block";
+    }
+} )
+
+tentativeItenerary.addEventListener("click", event =>{
+    if (event.target.id === "closeweather") {
+        const modal = document.getElementById("weatherForcast")
         modal.style.display = "none";
     }
 } )

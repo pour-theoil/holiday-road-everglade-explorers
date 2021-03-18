@@ -1,12 +1,14 @@
-export const parksDetailsModal = (object) => {
-    return `
-    <div id="natParksDetails" class="modal">
+import { currentWeather } from "../parks/ListManager.js"
+
+export const weatherModal = () => {
+    const weatherhtml =`
+    <div id="weatherForcast" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-            <p>${object}</p>
-            <span class="close">&times;</span>
+            <p>${currentWeather}</p>
+            <span id="closeweather">&times;</span>
         </div>
-
     </div>`
+    document.querySelector(".modspot").innerHTML = weatherhtml;
 }

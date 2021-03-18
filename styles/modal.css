@@ -20,12 +20,17 @@
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 40%;
     border-radius: 5px;
   }
   
   .modal-content p {
+    font-size: 2em;
     max-width: 90%;
+  }
+
+  .modal-content img {
+    width: 100%;
   }
   /* The Close Button */
   .close {
