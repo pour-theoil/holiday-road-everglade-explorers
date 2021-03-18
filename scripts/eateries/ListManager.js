@@ -14,9 +14,9 @@ export const eateryCard = (eateryId) => {
     eateryArray.forEach(item => {
         if (item.id.toString() === eateryId) {
             const eateryHTML = `
-            <h4>${item.businessName}</h4>
-            <p>${item.description}</p>
+            <h3>${item.businessName}</h3>
             <p>${item.city}, ${item.state}</p>
+            <p class="para">${item.description}</p>
             <div id="eatsDetails" class="modal">
             <!-- Modal content -->
                 <div class="modal-content">

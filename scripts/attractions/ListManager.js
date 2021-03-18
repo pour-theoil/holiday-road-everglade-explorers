@@ -18,10 +18,13 @@ export const attractionCard = (attractionId) => {
     attractionArray.forEach(item => {
         if (item.id.toString() === attractionId) {
             const attractionHTML = `
-            <h4>${item.name}</h4>
-            <p>${item.description}</p>
+            <h3>${item.name}</h3>
             <p>${item.city}, ${item.state}</p>
+
+            <p class="para">${item.description}</p>
+            <div id="natParksDetails" class="modal">
             <div id="bizDetails" class="modal">
+
             <!-- Modal content -->
             <div class="modal-content">
                 <ul><h3>Important Details</h3>

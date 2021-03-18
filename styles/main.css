@@ -62,19 +62,21 @@ h3, label {
     min-width: 300px;
     background-color:#ffd166;
     padding: 5%;
+    padding-bottom: 0%;
+    padding-top: 2%;
     border-radius: 10px;
 }
 .dropDownSection{
     display: flex;
     flex-direction: column;
-    margin-top:10%;
-    margin-bottom: 20%;
+    margin-top: 10%;
+    margin-bottom: 15%;
 }
 label{
     font-size: 25px;
 }
 .selectorDropdown{
-    margin-top: 5%;
+    margin-top: 3%;
     width: 100%;
     border-radius: 5px;
     border: 0px;
@@ -86,13 +88,14 @@ label{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 5%;
+    padding-top: 2%;
     align-content: space-around;
 }
 .aside{
     margin: 5%;
     background-color: aqua;
-    padding: 50px;
+    padding: 5%;
+    padding-top: 2%;
     width: 40%;
     min-width: 300px;
     background-color:#ffd166;
@@ -114,15 +117,22 @@ label{
     padding:2px;
     background-color: #ef476f;
     margin: 4%;
+    margin-top: 0px;
     border-radius: 2px;
 }
 .itineraryPreview{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     background-color: #118ab2;
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 10px;
+}
+.secondThirdCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .itineraryCard{
     background-color: #06d6a0;
@@ -130,10 +140,15 @@ label{
     padding: 5%;
     border-radius: 10px;
     justify-content: left;
+    min-width: 35%;
 }
 .itineraryCard h3{
-    font-size: 15px;
-    margin-bottom: 15%;
+    font-size: 18px;
+    margin-bottom: 1%;
+}
+.itineraryCard p{
+    font-size: 14px;
+    margin-bottom: 2%;
 }
 .itineraryCard button{
     justify-content: left;
@@ -144,6 +159,10 @@ label{
     background-color:  #ffd166;
     color: #073b4c;
 }
+.parkCard{
+    display: flex;
+    flex-direction: row;
+}
 button:hover{
     background-color: #ef476f;
 }
@@ -153,3 +172,33 @@ footer{
     color: #06d6a0;
     padding: 15px;
 }
+.itineraryButtonPreview{
+    display: flex;
+    justify-content: center;
+}
+/* hover action does not work with this button */
+#btnSaveItinerary{
+    margin-top: -10px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 3%;
+    background-color:  #ffd166;
+    color: #073b4c;
+    font-size: 15px;
+}
+.dailyweather{
+    background-color: #ef476f;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding: 3%;
+    border-radius: 5px;
+}
+.weatherMiniCards{
+    display: flex;
+    flex-direction: row;
+}
+.para{
+    margin-top: 15px;
+    font-size: 12px;
+  }
+

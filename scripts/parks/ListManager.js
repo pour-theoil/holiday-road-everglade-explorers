@@ -30,9 +30,14 @@ export const parkCard = (parkId) => {
                 currentWeather = getForcast(dailyweather)
             }).then(()=>{
             const parkHTML = `
-            <h4>${item.name}</h4>
+            <div class="weatherFormat">
+            <h3>${item.name}</h3>
+
             <p>${item.addresses[0].city}, ${item.addresses[0].stateCode}</p>
+            <div class="weatherMiniCards">
             <p>${currentWeather}</p>
+            </div>
+            </div>
             <div id="natParksDetails" class="modal">
             <!-- Modal content -->
                 <div class="modal-content">
@@ -43,7 +48,9 @@ export const parkCard = (parkId) => {
                  </div>
     
             </div>
+            <div class="seperateButtonDiv">
             <button id="ParkDetails" class="parkDetails">Details</button>
+            </div>
             `
             document.querySelector(".parkCard").innerHTML = parkHTML;
             })
