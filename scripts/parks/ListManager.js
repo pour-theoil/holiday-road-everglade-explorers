@@ -23,7 +23,7 @@ export const entryParksLoop = () => {
 export let currentWeather = []
 let img1 = {};
 let img2 = {};
- let addDetail ='';
+let addDetail = '';
 export const parkCard = (parkId) => {
     parkArray.forEach(item => {
         if (item.id === parkId) {
@@ -31,15 +31,11 @@ export const parkCard = (parkId) => {
                 .then(dailyweather => {
                     currentWeather = getForcast(dailyweather)
                 }).then(() => {
+                    img1 = getimg(1, item);
+                    img2 = getimg(2, item);
+                    addDetail = (item.operatingHours[0].description != undefined) ? item.operatingHours[0].description : "Hours not available";
+                }).then(() => {
                     const parkHTML = `
-            .then(dailyweather => {
-                currentWeather = getForcast(dailyweather)
-            }).then(()=>{   
-                img1 = getimg(1,item);
-                img2 = getimg(2,item);
-                addDetail = (item.operatingHours[0].description != undefined) ? item.operatingHours[0].description: "Hours not available";
-                }).then(()=>{   
-            const parkHTML = `
             <div class="weatherFormat">
             <div class="headingButton">
             <div class="headingFlex">
