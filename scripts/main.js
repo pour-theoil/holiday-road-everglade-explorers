@@ -26,6 +26,7 @@ const fiveday = () => {
 const dropdownElement = document.querySelector(".itinerary");
 const btnsave = document.querySelector("#btnSaveItinerary");
 const listItinerary = document.querySelector("#ul-savedItinerary");
+const menu = document.querySelector("#menuSelector");
 btnsave.disabled = true;
 //save itinerary button
 btnsave.addEventListener("click", event =>{
@@ -41,6 +42,22 @@ btnsave.addEventListener("click", event =>{
         itineraryObj.eateryId =  HTMLSelector.value;
         itineraryObj.eateryName =  HTMLSelector.options[HTMLSelector.selectedIndex].innerText;      
         saveItin(itineraryObj);  
+    }
+})
+// menu dropdown
+menu.addEventListener("change", event => {
+    let menu = event.target.value;
+    switch (menu) {
+        case "sl":
+            window.location.hash = '#selectorArea';
+            break;
+        case "si":
+            window.location.hash = '#ul-savedItinerary';
+            break;
+        case "id":
+            window.location.hash = '#btnSaveItinerary';
+            break;
+
     }
 })
 // park dropdown
