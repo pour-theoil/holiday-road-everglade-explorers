@@ -6,7 +6,7 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 
@@ -90,6 +90,7 @@ label{
     justify-content: space-around;
     padding-top: 2%;
     align-content: space-around;
+    height: max-content;
 }
 .aside{
     margin: 5%;
@@ -108,6 +109,12 @@ label{
     padding: 5%;
     padding-left: 10%;
     margin-top: 5%;
+    font-family: "Source Serif Pro", serif;
+    font-size: 15px;
+    display: grid;
+    grid-template-rows: repeat(15, max-content);
+    grid-auto-flow: column;
+    list-style-type: none;
 }
 .aside h3{
     font-size: 25px;
@@ -150,15 +157,6 @@ label{
     font-size: 14px;
     margin-bottom: 2%;
 }
-.itineraryCard button{
-    justify-content: left;
-    margin-top: 10%;
-    border-radius: 5px;
-    border: 0px;
-    padding: 5px;
-    background-color:  #ffd166;
-    color: #073b4c;
-}
 .parkCard{
     display: flex;
     flex-direction: row;
@@ -188,17 +186,45 @@ footer{
 }
 .dailyweather{
     background-color: #ef476f;
-    margin-right: 1%;
-    margin-left: 1%;
-    padding: 3%;
+    margin: 1%;
+    padding: 1.25%;
     border-radius: 5px;
+    height: 100%;
 }
 .weatherMiniCards{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: auto;
+    height: 100%;
 }
 .para{
     margin-top: 15px;
     font-size: 12px;
   }
 
+a:visited {
+    color: black;
+}
+.headingButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.parkDetails, .eateryDetails, .bizarreDetails {
+    margin-top: 0%;
+    margin-left: 5%;
+    justify-content: left;
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+    background-color:  #ffd166;
+    color: #073b4c;
+}
+.weatherFormat {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

@@ -79,12 +79,7 @@ dropdownElement.addEventListener("change", event => {
     }
 })
     
-
-
-
-
-
-
+// itinerary preview listeners
 const tentativeItenerary = document.querySelector("body")
 
 
