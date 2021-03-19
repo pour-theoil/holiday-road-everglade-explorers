@@ -21,14 +21,20 @@ export const entryParksLoop = () => {
 }
 
 export let currentWeather = []
-
+let img1 = {};
+let img2 = {};
+ let addDetail ='';
 export const parkCard = (parkId) => {
     parkArray.forEach(item => {
         if (item.id === parkId) {
             getWeather(item.latitude, item.longitude, settings.weatherKey)
             .then(dailyweather => {
                 currentWeather = getForcast(dailyweather)
-            }).then(()=>{
+            }).then(()=>{   
+                img1 = getimg(1,item);
+                img2 = getimg(2,item);
+                addDetail = (item.operatingHours[0].description != undefined) ? item.operatingHours[0].description: "Hours not available";
+                }).then(()=>{   
             const parkHTML = `
             <div class="weatherFormat">
             <h3>${item.name}</h3>
@@ -41,12 +47,17 @@ export const parkCard = (parkId) => {
             <div id="natParksDetails" class="modal">
             <!-- Modal content -->
                 <div class="modal-content">
+                <img src="${img1.img}" alt=${img1.altTxt} width="20%" height="15%"> 
                     <div>
                         <p>${item.description}</p>
-                    </div>    
+                    </div>   
+                    <div>
+                    <p>${addDetail}</p>
+                </div>  
+                    <img src="${img2.img}" alt=${img2.altTxt} width="20%" height="15%">
                     <span id="closeparkdets" class="close">&times;</span>
                  </div>
-    
+
             </div>
             <div class="seperateButtonDiv">
             <button id="ParkDetails" class="parkDetails">Details</button>
@@ -56,4 +67,18 @@ export const parkCard = (parkId) => {
             })
         }
     });
+}
+
+const getimg = (nbr, item) => {
+    let retImg = {};
+    if (nbr === 1) {
+        retImg.img = (item.images[0].url != undefined) ? item.images[0].url : "../../Images/stockimg1.jpeg";
+        retImg.altTxt = (item.images[0].url != undefined) ? item.images[0].title : "National park image";
+        return retImg;
+    }
+    else {
+        retImg.img = (item.images[1].url != undefined) ? item.images[1].url : "../../Images/stockimg2.jpeg";
+        retImg.altTxt = (item.images[1].url != undefined) ? item.images[1].title : "National park image";
+        return retImg;
+    }
 }
