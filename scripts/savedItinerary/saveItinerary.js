@@ -30,9 +30,10 @@ export const  saveItin = (itineraryObj) =>{
             .then(data => {
               alert(`The itinerary : ${data.itineraryName} was saved`)
               modal.style.display = "none"
+              getSavedItinerary()
           })
         }else {
-            alert("enter am Itinerary Name");
+            alert("enter an Itinerary Name");
             input.focus();
         };
         
