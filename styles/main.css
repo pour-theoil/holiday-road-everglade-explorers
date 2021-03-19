@@ -190,7 +190,7 @@ footer{
     padding: 3%;
     border-radius: 5px;
     width: 150px;
-    height: 125px;
+    height: 135px;
 }
 .weatherMiniCards{
     display: flex;
@@ -221,4 +221,7 @@ a:visited {
     padding: 5px;
     background-color:  #ffd166;
     color: #073b4c;
+}
+weatherFormat {
+    margin: 2rem;
 }
