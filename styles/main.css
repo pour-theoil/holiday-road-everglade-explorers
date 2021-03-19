@@ -222,6 +222,10 @@ a:visited {
     background-color:  #ffd166;
     color: #073b4c;
 }
-weatherFormat {
+.weatherFormat {
     margin: 2rem;
+}
+
+.eateryDetails, .bizarreDetails {
+    background-color: #ffd166;
 }
