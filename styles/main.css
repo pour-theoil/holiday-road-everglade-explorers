@@ -94,17 +94,18 @@ label{
 }
 .aside{
     margin: 5%;
-    background-color: aqua;
     padding: 5%;
     padding-top: 2%;
     width: 40%;
     min-width: 300px;
-    background-color:#ffd166;
+    background-color: #ffd166;
+    /* background-image:linear-gradient(to top left, #ffd166, #ffe3a3); */
     padding: 5%;
     border-radius: 10px;
 }
 .aside ul{
-    background-color: #118ab2;
+    background-image:linear-gradient(to bottom right, #118ab2, #ffe3a3);
+    /* background-color: #118ab2; */
     border-radius: 10px;
     padding: 5%;
     padding-left: 10%;
