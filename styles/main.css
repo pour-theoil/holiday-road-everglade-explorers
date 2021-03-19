@@ -6,7 +6,7 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 
@@ -104,7 +104,6 @@ label{
     border-radius: 10px;
 }
 .aside ul{
-    column-count: 2;
     background-color: #118ab2;
     border-radius: 10px;
     padding: 5%;
@@ -112,6 +111,10 @@ label{
     margin-top: 5%;
     font-family: "Source Serif Pro", serif;
     font-size: 15px;
+    display: grid;
+    grid-template-rows: repeat(15, max-content);
+    grid-auto-flow: column;
+    list-style-type: none;
 }
 .aside h3{
     font-size: 25px;
@@ -154,15 +157,6 @@ label{
     font-size: 14px;
     margin-bottom: 2%;
 }
-.itineraryCard button{
-    justify-content: left;
-    margin-top: 10%;
-    border-radius: 5px;
-    border: 0px;
-    padding: 5px;
-    background-color:  #ffd166;
-    color: #073b4c;
-}
 .parkCard{
     display: flex;
     flex-direction: row;
@@ -192,14 +186,17 @@ footer{
 }
 .dailyweather{
     background-color: #ef476f;
-    margin-right: 1%;
-    margin-left: 1%;
+    margin: 1%;
     padding: 3%;
     border-radius: 5px;
+    width: 150px;
+    height: 125px;
 }
 .weatherMiniCards{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .para{
     margin-top: 15px;
@@ -208,4 +205,20 @@ footer{
 
 a:visited {
     color: black;
+}
+.headingButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+.parkDetails {
+    margin-top: 0%;
+    margin-left: 5%;
+    justify-content: left;
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+    background-color:  #ffd166;
+    color: #073b4c;
 }

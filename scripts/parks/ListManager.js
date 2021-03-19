@@ -26,14 +26,19 @@ export const parkCard = (parkId) => {
     parkArray.forEach(item => {
         if (item.id === parkId) {
             getWeather(item.latitude, item.longitude, settings.weatherKey)
-            .then(dailyweather => {
-                currentWeather = getForcast(dailyweather)
-            }).then(()=>{
-            const parkHTML = `
+                .then(dailyweather => {
+                    currentWeather = getForcast(dailyweather)
+                }).then(() => {
+                    const parkHTML = `
             <div class="weatherFormat">
+            <div class="headingButton">
+            <div class="headingFlex">
             <h3>${item.name}</h3>
 
             <p>${item.addresses[0].city}, ${item.addresses[0].stateCode}</p>
+            </div>
+            <button id="ParkDetails" class="parkDetails">Details</button>
+            </div>
             <div class="weatherMiniCards">
             <p>${currentWeather}</p>
             </div>
@@ -48,12 +53,9 @@ export const parkCard = (parkId) => {
                  </div>
     
             </div>
-            <div class="seperateButtonDiv">
-            <button id="ParkDetails" class="parkDetails">Details</button>
-            </div>
             `
-            document.querySelector(".parkCard").innerHTML = parkHTML;
-            })
+                    document.querySelector(".parkCard").innerHTML = parkHTML;
+                })
         }
     });
 }
